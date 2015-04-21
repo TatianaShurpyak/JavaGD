@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+//  Simple app which can get 2 args and print max value
+
 public class First {
 
     public static void main(String[] args) {
