@@ -1,3 +1,5 @@
+package Homework1;
+
 import java.util.Scanner;
 
 // Simple app which can get 1 args as a number from [1-7] and prints Day(Use ‘switch’ here)

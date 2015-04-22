@@ -1,3 +1,5 @@
+package Homework1;
+
 import java.util.Scanner;
 
 //  Simple app which can get 2 args and print max value
