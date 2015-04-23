@@ -32,7 +32,7 @@ public class Third {
                 break;
             case SQUARE:
                 int side = Integer.parseInt(reader.readLine());
-                System.out.println("Square perimeter is " + 4*side);
+                System.out.println("Square perimeter is " + perSquare(side));
                 break;
             case CIRCLE:
                 int radius = Integer.parseInt(reader.readLine());
