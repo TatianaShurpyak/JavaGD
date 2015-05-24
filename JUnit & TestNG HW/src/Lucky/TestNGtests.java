@@ -1,46 +1,49 @@
 package Lucky;
 
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-
-/* The tests here are the same as in JUnitTests class.
-Please let me know if those 5 test were supposed to be different and I will be happy to write new ones.
- */
+import org.testng.Assert;
 
 public class TestNGtests {
 
-        LuckyTicket.Ticket ticket = new LuckyTicket.Ticket();
+    private LuckyTicket.Ticket ticket;
+
+    @BeforeTest
+    public void setUp() {
+        ticket = new LuckyTicket.Ticket();
+    }
 
         @Test
         public void testIsLucky() {
             ticket.setNumber("346229");
-            org.junit.Assert.assertTrue(LuckyTicket.isLucky(ticket));
+            Assert.assertTrue(LuckyTicket.isLucky(ticket));
         }
 
         @Test
         public void testIsNotLucky() {
             ticket.setNumber("275538");
-            org.junit.Assert.assertFalse(LuckyTicket.isLucky(ticket));
+            Assert.assertFalse(LuckyTicket.isLucky(ticket));
         }
 
         @Test
         public void shortNumber() {
             ticket.setNumber("74158");
             LuckyTicket.isLucky(ticket);
-            org.junit.Assert.assertTrue("ArrayIndexOutOfBoundsException was not thrown", ticket.tooShort);
+            Assert.assertTrue(ticket.tooShort,"ArrayIndexOutOfBoundsException was not thrown");
         }
 
         @Test
         public void longNumber() {
             ticket.setNumber("7894562");
             LuckyTicket.isLucky(ticket);
-            org.junit.Assert.assertTrue("TooLongTicketNumberException was not thrown", ticket.tooLong);
+            Assert.assertTrue(ticket.tooLong, "TooLongTicketNumberException was not thrown");
         }
 
         @Test
         public void charsIncluded() {
             ticket.setNumber("jyhyn6");
             LuckyTicket.isLucky(ticket);
-            org.junit.Assert.assertTrue("NotDigitTicketNumberException was not thrown", ticket.notDigitsDetected);
+            Assert.assertTrue(ticket.notDigitsDetected, "NotDigitTicketNumberException was not thrown");
         }
 
     }
