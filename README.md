@@ -1,2 +1,0 @@
-# WebDriver
-Selenium WebDriver stuff
