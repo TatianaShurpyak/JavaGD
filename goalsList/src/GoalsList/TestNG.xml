@@ -1,0 +1,24 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="TestGoal">
+
+    <test name="GoalsPositive">
+        <classes>
+            <class name="GoalsList.GoalsTestsPositive" />
+        </classes>
+    </test>
+
+    <test name="GoalsNegative">
+        <classes>
+            <class name="GoalsList.GoalsTestsNegative" />
+        </classes>
+    </test>
+
+    <test name="Users">
+        <classes>
+            <class name="GoalsList.UserTestsPositive" />
+        </classes>
+    </test>
+
+</suite>
+
